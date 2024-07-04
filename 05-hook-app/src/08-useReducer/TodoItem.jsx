@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
   return (
     <li
-      className='list-group-item d-flex justify-content-between 
-        align-items-center'
+      className='list-group-item d-flex justify-content-between align-items-center'
     >
       <span
+        aria-label='span'
         className={`${ todo.done ? 'text-decoration-line-through' : '' }`}
         onClick={ () => onToggleTodo(todo.id) }
       >

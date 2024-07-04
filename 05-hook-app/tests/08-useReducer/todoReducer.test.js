@@ -36,23 +36,29 @@ describe('todoReducer', () => {
   
   test('should delete ToDo', () => {
     // Arrange
-    
+    const action = {
+      type: 'remove',
+      payload: 1
+    };
 
     // Act
-    
+    const newState = todoReducer(initialState, action);
 
     // Assert
-
+    expect(newState.length).toBe(0);
   });
   
   test('should toggle ToDo', () => {
     // Arrange
-    
+    const action = {
+      type: 'toggle',
+      payload: 1
+    };
 
     // Act
-    
+    const newState = todoReducer(initialState, action);
 
     // Assert
-
+    expect(newState[0]).toBeTruthy();
   });
 });
