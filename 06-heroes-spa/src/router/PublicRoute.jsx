@@ -9,9 +9,9 @@ export const PublicRoute = ({ children }) => {
 
   return (!logged)
     ? children
-    : <Navigate to='/'/>
+    : <Navigate to='/marvel'/>
 }
 
 PublicRoute.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.any,
 }

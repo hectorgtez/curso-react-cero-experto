@@ -17,5 +17,5 @@ export const PrivateRoute = ({ children }) => {
 }
 
 PrivateRoute.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.any,
 }
