@@ -13,8 +13,11 @@ import {
   Typography
 } from '@mui/material';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 
 export const Sidebar = ({ drawerWidth = 240 }) => {
+  const { displayName } = useSelector( state => state.auth );
+
   return (
     <Box
       component='nav'
@@ -37,7 +40,7 @@ export const Sidebar = ({ drawerWidth = 240 }) => {
             noWrap
             component='div'
           >
-            Héctor Gutiérrez
+            { displayName }
           </Typography>
         </Toolbar>
 
