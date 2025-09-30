@@ -1,5 +1,5 @@
 /**
- * Rutas de usuarios / Auth
+ * Users routes / Auth
  * host + /api/auth
  */
 
@@ -10,7 +10,6 @@ const { validateJWT } = require('../middlewares/validate-jwt');
 const { createUser, loginUser, renewToken } = require('../controllers/auth');
 
 const router = Router();
-
 
 router.get('/renew', validateJWT, renewToken);
 
